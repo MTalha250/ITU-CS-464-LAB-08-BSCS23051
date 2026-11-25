@@ -3,9 +3,12 @@ using UnityEngine.EventSystems;
 using UnityEngine.UI;
 
 // Press feedback: the button sinks a little under the finger, then springs back with OutBack.
-public class ButtonFeedback : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerExitHandler
+// It also asks the UI audio player for a hover tick (mouse over, or keyboard selection) and a click.
+public class ButtonFeedback : MonoBehaviour, IPointerDownHandler, IPointerUpHandler, IPointerExitHandler,
+    IPointerEnterHandler, ISelectHandler, IPointerClickHandler, ISubmitHandler
 {
     [SerializeField] float pressedScale = 0.94f;
+    [SerializeField] UiSound clickSound = UiSound.Press;   // Back buttons use None: the router plays Back
     Selectable selectable;
     Coroutine running;
     bool down;
@@ -26,6 +29,14 @@ public class ButtonFeedback : MonoBehaviour, IPointerDownHandler, IPointerUpHand
     }
 
     public void OnPointerUp(PointerEventData e) => Release();
+    public void OnPointerEnter(PointerEventData e) => Hover();
+    public void OnSelect(BaseEventData e) => Hover();
+    public void OnPointerClick(PointerEventData e) => Click();
+    public void OnSubmit(BaseEventData e) => Click();
+
+    bool Usable => selectable == null || selectable.interactable;
+    void Hover() { if (Usable) UiAudio.Play(UiSound.Hover); }
+    void Click() { if (Usable) UiAudio.Play(clickSound); }
     public void OnPointerExit(PointerEventData e) => Release();
 
     void Release()

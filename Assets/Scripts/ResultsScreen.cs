@@ -10,12 +10,12 @@ public class ResultsScreen : UIScreen
     [SerializeField] TMP_Text[] stars;
     [SerializeField] Color starOn, starOff;
     [SerializeField] Button next;
-    [SerializeField] UIScreen gameplay, levelSelect, mainMenu;
+    [SerializeField] UIScreen gameplay;
 
     public override void OnShow()
     {
         int earned = GameData.LastStars;
-        title.text = earned > 0 ? "Level complete!" : "So close!";
+        title.text = !GameData.LastWon ? "Your light went out" : earned > 0 ? "Level complete!" : "So close!";
         levelName.text = GameData.LevelTitle(GameData.Level);
         sparks.text = $"{GameData.LastSparks} sparks";
         coins.text = $"+{GameData.LastCoins} coins";
@@ -40,7 +40,14 @@ public class ResultsScreen : UIScreen
     }
 
     public void Retry() => UIRouter.Instance.Replace(gameplay);
-    public void Levels() => UIRouter.Instance.Home(levelSelect);
-    public void Home() => UIRouter.Instance.Home(mainMenu);
+    // the menus are in the other scene: load it, opening on the right screen with Back still working
+    public void Levels() => ToMenu("Title", "MainMenu", "LevelSelect");
+    public void Home() => ToMenu("Title", "MainMenu");
+
+    public static void ToMenu(params string[] path)
+    {
+        UIRouter.StartPath = path;
+        SceneLoader.Instance.Load("Riverlight", "Back to the menu");
+    }
     public override void OnBackPressed() => Levels();
 }

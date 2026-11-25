@@ -10,7 +10,6 @@ public class LevelSelectScreen : UIScreen
     [SerializeField] RectTransform ring;
     [SerializeField] TMP_Text levelTitle, levelBest, lanternName, message;
     [SerializeField] Color openColor, lockedColor, starOn, starOff;
-    [SerializeField] UIScreen gameplay;
     int selected;
     Coroutine messageFade;
 
@@ -51,6 +50,7 @@ public class LevelSelectScreen : UIScreen
         if (level > GameData.Unlocked)
         {
             Tween.Shake(this, (RectTransform)tiles[level - 1].transform);
+            UiAudio.Play(UiSound.Error);
             Say($"Finish level {GameData.Unlocked} to open level {level}");
             return;
         }
@@ -79,6 +79,6 @@ public class LevelSelectScreen : UIScreen
     public void Play()
     {
         GameData.Level = selected;
-        UIRouter.Instance.Go(gameplay);
+        SceneLoader.Instance.Load("Gameplay", GameData.LevelTitle(selected));   // the level is its own scene now
     }
 }

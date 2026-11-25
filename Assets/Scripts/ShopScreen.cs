@@ -53,6 +53,7 @@ public class ShopScreen : UIScreen
         if (GameData.Coins < Prices[i])
         {
             Tween.Shake(this, (RectTransform)buy[i].transform);
+            UiAudio.Play(UiSound.Error);
             Toast($"You need {Prices[i] - GameData.Coins:N0} more coins");
             return;
         }
@@ -61,6 +62,7 @@ public class ShopScreen : UIScreen
         confirmBody.text = $"{Prices[i]:N0} coins. You'll have {GameData.Coins - Prices[i]:N0} left.";
         confirm.gameObject.SetActive(true);
         confirm.blocksRaycasts = true;
+        UiAudio.Play(UiSound.Open);
         Tween.Run(this, 0.3f, Ease.OutBack, p =>
         {
             confirm.alpha = Mathf.Clamp01(p * 2f);
@@ -76,6 +78,7 @@ public class ShopScreen : UIScreen
         else if (i == 2) GameData.Magnets++;
         else GameData.ExtraLights++;
         Close(true);
+        UiAudio.Play(UiSound.Success);
         // the balance counts down, so you can see where the coins went
         Tween.Run(this, 0.6f, Ease.OutQuad, p => coins.text = Mathf.RoundToInt(Mathf.Lerp(before, GameData.Coins, p)).ToString("N0"));
         for (int k = 0; k < buy.Length; k++) Refresh(k);
@@ -83,7 +86,11 @@ public class ShopScreen : UIScreen
         Toast(i < 2 ? $"{Names[i]} added to your lanterns" : $"{Names[i]} added");
     }
 
-    public void Cancel() => Close(true);
+    public void Cancel()
+    {
+        UiAudio.Play(UiSound.Close);
+        Close(true);
+    }
 
     void Close(bool animate)
     {

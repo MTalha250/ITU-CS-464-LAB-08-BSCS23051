@@ -69,6 +69,7 @@ public class LoadoutScreen : UIScreen
             return;
         }
         GameData.Equipped = shown;
+        UiAudio.Play(UiSound.Success);
         for (int i = 0; i < cards.Length; i++) Refresh(i);
         Tween.Scale(this, cards[shown].transform.Find("State"), 1.35f, 1f, 0.35f, Ease.OutBack);   // the badge stamps on
         action.interactable = false;
