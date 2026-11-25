@@ -29,6 +29,7 @@ public static class GameData
     public static int Magnets = 1, ExtraLights;
 
     public static int LastSparks, LastStars, LastScore, LastCoins;
+    public static bool LastWon;
 
     // the highest level you can play: one past the last level with any stars
     public static int Unlocked
@@ -43,10 +44,11 @@ public static class GameData
 
     public static string LevelTitle(int level) => $"Level {level} · {LevelNames[level - 1]}";
 
-    public static void Finish(int sparks)
+    public static void Finish(int sparks, bool won)
     {
+        LastWon = won;
         LastSparks = sparks;
-        LastStars = sparks >= 15 ? 3 : sparks >= 9 ? 2 : sparks >= 4 ? 1 : 0;
+        LastStars = !won ? 0 : sparks >= 15 ? 3 : sparks >= 9 ? 2 : sparks >= 4 ? 1 : 0;   // no stars if the light went out
         LastScore = sparks * 100 + LastStars * 250;
         LastCoins = sparks * 5;
         Coins += LastCoins;

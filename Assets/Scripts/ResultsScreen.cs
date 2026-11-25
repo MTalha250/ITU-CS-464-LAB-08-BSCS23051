@@ -15,7 +15,7 @@ public class ResultsScreen : UIScreen
     public override void OnShow()
     {
         int earned = GameData.LastStars;
-        title.text = earned > 0 ? "Level complete!" : "So close!";
+        title.text = !GameData.LastWon ? "Your light went out" : earned > 0 ? "Level complete!" : "So close!";
         levelName.text = GameData.LevelTitle(GameData.Level);
         sparks.text = $"{GameData.LastSparks} sparks";
         coins.text = $"+{GameData.LastCoins} coins";
