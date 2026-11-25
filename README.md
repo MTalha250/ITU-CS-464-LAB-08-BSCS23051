@@ -4,7 +4,7 @@
 **Roll number:** BSCS23051
 **Course:** CS-464 Game Development, Lab 08
 
-**Demo video:** link coming soon
+**Demo video:** [Riverlight Lab 08 demo, with sound (Google Drive)](https://drive.google.com/file/d/1aIsONX7JLiK5oIo--Wo7pi77QFq6cigt/view?usp=sharing)
 
 This is my Lab 07 project, *Riverlight*, carried on. All 10 Lab 07 screens still work the same way, with the same navigation, tweens and portrait layout: Title, Main Menu, Level Select, Lanterns, Shop, Settings, Gameplay, Pause, Results and Credits. For Lab 08 I added:
 - a real loading screen
@@ -52,7 +52,11 @@ Going the other way works the same. Results → Levels or Home, and Pause → Qu
 | **SFX** | gameplay effects (SfxPlayer, 4 sources) | `SfxVolume` |
 | **UI** | every menu sound (UiAudio, 1 source) | `UiVolume` |
 
-All the players live on one `AudioRig` prefab that's in both scenes. The first copy survives every scene load (`DontDestroyOnLoad`), and any later copy destroys itself, so the music never doubles.
+The Audio Mixer window in Play mode, with the music playing through Music and Master, and the peak marks from a few UI clicks on the UI meter:
+
+<img src="Docs/lab08/audio-mixer.png" width="620" alt="The Audio Mixer: Master, Music, SFX and UI">
+
+All the players live on one `AudioRig` prefab that's in both scenes. The first copy survives every scene load (`DontDestroyOnLoad`), and any later copy destroys itself, so the music never doubles. Each scene has exactly one AudioListener, on its Main Camera. The game is all UI, so the camera is where the player "is".
 
 **Volume mapping.** Settings has four sliders: Master, Music, Effects and UI sounds. Each one runs 0 to 1, and `VolumeSettings` turns that into decibels:
 
