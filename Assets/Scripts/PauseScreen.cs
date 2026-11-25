@@ -3,7 +3,7 @@ using UnityEngine;
 // 08 Pause, a modal over the level. Lecture 08's pause: time stops while it's open.
 public class PauseScreen : UIScreen
 {
-    [SerializeField] UIScreen gameplay, settings, mainMenu;
+    [SerializeField] UIScreen gameplay, settings;
 
     public override void OnShow()
     {
@@ -21,5 +21,5 @@ public class PauseScreen : UIScreen
     public void Resume() => UIRouter.Instance.Back();
     public void Restart() => UIRouter.Instance.Replace(gameplay);
     public void OpenSettings() => UIRouter.Instance.Go(settings);
-    public void Quit() => UIRouter.Instance.Home(mainMenu);
+    public void Quit() => ResultsScreen.ToMenu("Title", "MainMenu");
 }

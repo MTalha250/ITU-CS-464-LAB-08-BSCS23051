@@ -8,5 +8,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Riverlight.unity
     guid: 1ba6555b007424ac4bf2a108d9e64feb
+  - enabled: 1
+    path: Assets/Scenes/Gameplay.unity
+    guid: 8db1e90b3fdeb46fea5931b82acde441
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 052faaac586de48259a63d0c4782560b, type: 3}

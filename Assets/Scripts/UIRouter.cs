@@ -11,6 +11,7 @@ public class UIRouter : MonoBehaviour
 {
     public static UIRouter Instance { get; private set; }
     public static bool ReduceMotion;               // set by Settings: fades instead of slides
+    public static string[] StartPath;              // set before loading a scene: the stack to open it on
 
     [SerializeField] UIScreen first;
     [SerializeField] float pageTime = 0.35f, modalTime = 0.3f, fadeTime = 0.3f;
@@ -33,9 +34,18 @@ public class UIRouter : MonoBehaviour
 
     void Start()
     {
-        stack.Add(first);
-        Open(first, Vector2.zero, 1f);
-        first.OnShow();
+        // coming back from the Gameplay scene: rebuild the back stack, e.g. Title > MainMenu > LevelSelect
+        if (StartPath != null)
+            foreach (string name in StartPath)
+            {
+                var t = transform.Find(name);
+                if (t) stack.Add(t.GetComponent<UIScreen>());
+            }
+        StartPath = null;
+        if (stack.Count == 0) stack.Add(first);
+        UIScreen top = Current;
+        Open(top, Vector2.zero, 1f);
+        top.OnShow();
         Finish();
     }
 
