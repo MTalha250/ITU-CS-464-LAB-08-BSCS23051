@@ -71,7 +71,13 @@ AudioMixerController:
     name: SfxVolume
   - guid: c674ecf728a5b430fbcec9d3229bb16a
     name: UiVolume
-  m_AudioMixerGroupViews: []
+  m_AudioMixerGroupViews:
+  - guids:
+    - f7d1ea4da437445dd9c871526cdf74a2
+    - e3a14ebe3506d4f97b99717fdb9a16cb
+    - c7cd7688d70564c1095e7d0880a79026
+    - c18d8be7b46f948fb9fd31454dfbc30c
+    name: View
   m_CurrentViewIndex: 0
   m_TargetSnapshot: {fileID: 24500006}
 --- !u!243 &24300002
