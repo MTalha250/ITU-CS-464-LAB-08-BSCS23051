@@ -2,11 +2,12 @@ using TMPro;
 using UnityEngine;
 using UnityEngine.UI;
 
-// 06 Settings. Every change applies at once and is saved (PlayerPrefs), so there's no Save button to miss.
+// 06 Settings. Master, Music, Effects and UI volume (mixer groups, in decibels), vibration and
+// reduce motion. Every change applies at once and is saved in PlayerPrefs, so it survives a restart.
 public class SettingsScreen : UIScreen
 {
-    [SerializeField] Slider music, sfx;
-    [SerializeField] TMP_Text musicValue, sfxValue;
+    [SerializeField] Slider[] volumes;               // Master, Music, SFX, UI: same order as VolumeSettings.Parameters
+    [SerializeField] TMP_Text[] values;
     [SerializeField] Toggle vibration, reduceMotion;
     bool wired;
 
@@ -14,15 +15,23 @@ public class SettingsScreen : UIScreen
     {
         if (wired) return;
         wired = true;
-        music.SetValueWithoutNotify(PlayerPrefs.GetFloat("music", 0.8f));
-        sfx.SetValueWithoutNotify(PlayerPrefs.GetFloat("sfx", 1f));
+        for (int i = 0; i < volumes.Length; i++)
+        {
+            int k = i;
+            string parameter = VolumeSettings.Parameters[k];
+            volumes[k].SetValueWithoutNotify(VolumeSettings.Get(parameter));
+            ShowValue(k);
+            volumes[k].onValueChanged.AddListener(v =>
+            {
+                VolumeSettings.Set(AudioRig.Mixer, parameter, v);
+                ShowValue(k);
+                UiAudio.Play(UiSound.Hover);      // a tick, so you hear the UI volume as you move it
+            });
+        }
         vibration.SetIsOnWithoutNotify(PlayerPrefs.GetInt("vibration", 1) == 1);
         reduceMotion.SetIsOnWithoutNotify(PlayerPrefs.GetInt("reduceMotion", 0) == 1);
-        ShowValues();
         vibration.GetComponent<ToggleSwitch>().Sync();
         reduceMotion.GetComponent<ToggleSwitch>().Sync();
-        music.onValueChanged.AddListener(v => { PlayerPrefs.SetFloat("music", v); ShowValues(); });
-        sfx.onValueChanged.AddListener(v => { PlayerPrefs.SetFloat("sfx", v); ShowValues(); });
         vibration.onValueChanged.AddListener(v => PlayerPrefs.SetInt("vibration", v ? 1 : 0));
         reduceMotion.onValueChanged.AddListener(v =>
         {
@@ -32,9 +41,9 @@ public class SettingsScreen : UIScreen
         });
     }
 
-    void ShowValues()
+    void ShowValue(int i)
     {
-        musicValue.text = Mathf.RoundToInt(music.value * 100f) + "%";
-        sfxValue.text = Mathf.RoundToInt(sfx.value * 100f) + "%";
+        float v = volumes[i].value;
+        values[i].text = v <= 0.0001f ? "Off" : Mathf.RoundToInt(v * 100f) + "%";
     }
 }
