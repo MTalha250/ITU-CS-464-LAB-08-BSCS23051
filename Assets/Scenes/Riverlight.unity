@@ -7070,6 +7070,51 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 337462151}
   m_CullTransparentMesh: 1
+--- !u!1 &346070532
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 346070534}
+  - component: {fileID: 346070533}
+  m_Layer: 0
+  m_Name: MenuMusic
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &346070533
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346070532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8fb657796b66a48b880ab447c93a7422, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::MenuMusic
+  calmTrack: {fileID: 8300000, guid: 7d618dded19704e69908fc22370a00ba, type: 3}
+--- !u!4 &346070534
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 346070532}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &351046621
 GameObject:
   m_ObjectHideFlags: 0
@@ -8908,7 +8953,9 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: Every shape here (cards, lanterns, stars, the river) is drawn by code in Unity. No AI-generated or stock images.
+  m_text: 'Every shape here (cards, lanterns, stars, the river) is drawn by code in Unity. No AI-generated or stock images.
+
+    All sound effects and both music loops were synthesised by me with a Python script (Tools/make_audio.py). No third-party audio.'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 0bc3c337ac2d34c508976051cfc7cf8b, type: 2}
   m_sharedMaterial: {fileID: -2720171399143172951, guid: 0bc3c337ac2d34c508976051cfc7cf8b, type: 2}
@@ -46535,3 +46582,4 @@ SceneRoots:
   - {fileID: 1596162839}
   - {fileID: 801722411}
   - {fileID: 1089886334}
+  - {fileID: 346070534}

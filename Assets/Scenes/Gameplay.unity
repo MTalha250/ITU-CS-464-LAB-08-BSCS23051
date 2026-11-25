@@ -11392,6 +11392,8 @@ GameObject:
   - component: {fileID: 1129037270}
   - component: {fileID: 1129037269}
   - component: {fileID: 1129037268}
+  - component: {fileID: 1129037272}
+  - component: {fileID: 1129037271}
   m_Layer: 0
   m_Name: Gameplay
   m_TagString: Untagged
@@ -11522,6 +11524,39 @@ MonoBehaviour:
   - {fileID: 982869109}
   lit: {r: 1, g: 0.7137255, b: 0.28235295, a: 1}
   lost: {r: 0.16862746, g: 0.20392157, b: 0.34901962, a: 1}
+--- !u!114 &1129037271
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129037264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 67507bd62056c4c979374e1ae628f631, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameMusic
+  game: {fileID: 1129037265}
+  riverTrack: {fileID: 8300000, guid: f369efa13553549a396fcca1bae55aa1, type: 3}
+  calmTrack: {fileID: 8300000, guid: 7d618dded19704e69908fc22370a00ba, type: 3}
+--- !u!114 &1129037272
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1129037264}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 7d89f0eab090549b8afd68e95b780d35, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::GameplaySfx
+  game: {fileID: 1129037265}
+  start: {fileID: 8300000, guid: bbc3a95cd54ee4bc096983ec60f9fa95, type: 3}
+  spark: {fileID: 8300000, guid: 8e704172a6cac4b469319bf801cf7406, type: 3}
+  hit: {fileID: 8300000, guid: 624a295daebce41649e6fa254958393c, type: 3}
+  die: {fileID: 8300000, guid: c61403d85c08a4b6bb0504613acaaabe, type: 3}
+  win: {fileID: 8300000, guid: fdaad81108fc7485abe963c3cd96360c, type: 3}
 --- !u!1 &1155352583
 GameObject:
   m_ObjectHideFlags: 0
