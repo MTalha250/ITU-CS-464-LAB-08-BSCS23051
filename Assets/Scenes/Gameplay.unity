@@ -733,6 +733,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFeedback
   pressedScale: 0.94
+  clickSound: 2
 --- !u!114 &51175634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -4224,6 +4225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFeedback
   pressedScale: 0.94
+  clickSound: 2
 --- !u!222 &415506520
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -5616,6 +5618,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFeedback
   pressedScale: 0.94
+  clickSound: 2
 --- !u!114 &548365137
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -8222,6 +8225,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFeedback
   pressedScale: 0.94
+  clickSound: 2
 --- !u!114 &812948354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16457,6 +16461,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFeedback
   pressedScale: 0.94
+  clickSound: 2
 --- !u!114 &1695572222
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16820,6 +16825,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFeedback
   pressedScale: 0.94
+  clickSound: 2
 --- !u!222 &1723936191
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -17404,6 +17410,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFeedback
   pressedScale: 0.94
+  clickSound: 0
 --- !u!114 &1761707396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -18379,6 +18386,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFeedback
   pressedScale: 0.94
+  clickSound: 2
 --- !u!114 &1822394011
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -21680,6 +21688,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFeedback
   pressedScale: 0.94
+  clickSound: 2
 --- !u!114 &2083955713
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -22314,6 +22323,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFeedback
   pressedScale: 0.94
+  clickSound: 2
 --- !u!222 &2123804034
 CanvasRenderer:
   m_ObjectHideFlags: 0

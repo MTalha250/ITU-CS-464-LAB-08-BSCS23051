@@ -922,15 +922,15 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UiAudio
   source: {fileID: 506019717584031723}
-  hover: {fileID: 0}
-  press: {fileID: 0}
-  back: {fileID: 0}
-  open: {fileID: 0}
-  close: {fileID: 0}
-  pause: {fileID: 0}
-  resume: {fileID: 0}
-  success: {fileID: 0}
-  error: {fileID: 0}
+  hover: {fileID: 8300000, guid: 49060d0d09c0341cfa09ebda56ecf083, type: 3}
+  press: {fileID: 8300000, guid: c544f44de2aed40929d50c1e6001fdd8, type: 3}
+  back: {fileID: 8300000, guid: f46008cc7bfb04edfac89517e6b26486, type: 3}
+  open: {fileID: 8300000, guid: f327f9b7de5d34bbe80df820477465fe, type: 3}
+  close: {fileID: 8300000, guid: 13761666fff2c4bfe818cdeff4a8b6c2, type: 3}
+  pause: {fileID: 8300000, guid: f5eb080faf7c4446c86f081873754509, type: 3}
+  resume: {fileID: 8300000, guid: 554acc63fd7b54770a6fa519631c2589, type: 3}
+  success: {fileID: 8300000, guid: c19c05ae98ff14a059d0733d33c6fc34, type: 3}
+  error: {fileID: 8300000, guid: 824d4d78f464347ba97084cf2800fbcf, type: 3}
 --- !u!1 &7132074818419739652
 GameObject:
   m_ObjectHideFlags: 0

@@ -17,7 +17,11 @@ public class ToggleSwitch : MonoBehaviour
 
     Toggle T => toggle ? toggle : toggle = GetComponent<Toggle>();
 
-    void Awake() => T.onValueChanged.AddListener(on => Show(on, true));
+    void Awake() => T.onValueChanged.AddListener(on =>
+    {
+        UiAudio.Play(UiSound.Press);
+        Show(on, true);
+    });
     void OnEnable() => Show(T.isOn, false);
     public void Sync() => Show(T.isOn, false);
 

@@ -1198,6 +1198,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFeedback
   pressedScale: 0.94
+  clickSound: 2
 --- !u!114 &44175118
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -1702,6 +1703,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFeedback
   pressedScale: 0.94
+  clickSound: 2
 --- !u!114 &54900604
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3725,6 +3727,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFeedback
   pressedScale: 0.94
+  clickSound: 2
 --- !u!114 &164942689
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -7456,6 +7459,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFeedback
   pressedScale: 0.94
+  clickSound: 2
 --- !u!114 &368658032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10420,6 +10424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFeedback
   pressedScale: 0.94
+  clickSound: 2
 --- !u!114 &489423535
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -10570,6 +10575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFeedback
   pressedScale: 0.94
+  clickSound: 2
 --- !u!114 &492812157
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -11650,6 +11656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFeedback
   pressedScale: 0.94
+  clickSound: 2
 --- !u!114 &516916570
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -12480,6 +12487,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFeedback
   pressedScale: 0.94
+  clickSound: 2
 --- !u!114 &530327629
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -13199,6 +13207,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFeedback
   pressedScale: 0.94
+  clickSound: 2
 --- !u!222 &555712762
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -13566,6 +13575,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFeedback
   pressedScale: 0.94
+  clickSound: 2
 --- !u!114 &577237218
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -15414,6 +15424,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFeedback
   pressedScale: 0.94
+  clickSound: 2
 --- !u!114 &661723322
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -16230,6 +16241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFeedback
   pressedScale: 0.94
+  clickSound: 2
 --- !u!114 &689179419
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20026,6 +20038,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFeedback
   pressedScale: 0.94
+  clickSound: 0
 --- !u!114 &823790303
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -20445,6 +20458,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFeedback
   pressedScale: 0.94
+  clickSound: 2
 --- !u!114 &848470432
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -24881,6 +24895,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFeedback
   pressedScale: 0.94
+  clickSound: 0
 --- !u!114 &1141066048
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26385,6 +26400,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFeedback
   pressedScale: 0.94
+  clickSound: 2
 --- !u!114 &1187661973
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -26573,6 +26589,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFeedback
   pressedScale: 0.94
+  clickSound: 2
 --- !u!114 &1198104115
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -27815,6 +27832,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFeedback
   pressedScale: 0.94
+  clickSound: 2
 --- !u!222 &1238340509
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -28208,6 +28226,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFeedback
   pressedScale: 0.94
+  clickSound: 2
 --- !u!114 &1251920355
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -28358,6 +28377,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFeedback
   pressedScale: 0.94
+  clickSound: 2
 --- !u!114 &1261282197
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -29207,6 +29227,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFeedback
   pressedScale: 0.94
+  clickSound: 2
 --- !u!222 &1305562704
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -31034,6 +31055,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFeedback
   pressedScale: 0.94
+  clickSound: 2
 --- !u!114 &1384775615
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -31433,6 +31455,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFeedback
   pressedScale: 0.94
+  clickSound: 2
 --- !u!114 &1408770634
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -33199,6 +33222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFeedback
   pressedScale: 0.94
+  clickSound: 2
 --- !u!114 &1497378158
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34071,6 +34095,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFeedback
   pressedScale: 0.94
+  clickSound: 2
 --- !u!114 &1527068550
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -34846,6 +34871,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFeedback
   pressedScale: 0.94
+  clickSound: 2
 --- !u!114 &1563300106
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -36188,6 +36214,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFeedback
   pressedScale: 0.94
+  clickSound: 2
 --- !u!114 &1664591461
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -37856,6 +37883,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFeedback
   pressedScale: 0.94
+  clickSound: 0
 --- !u!114 &1761707396
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -38555,6 +38583,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFeedback
   pressedScale: 0.94
+  clickSound: 2
 --- !u!222 &1772221925
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -39512,6 +39541,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFeedback
   pressedScale: 0.94
+  clickSound: 2
 --- !u!114 &1834173354
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -40799,6 +40829,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFeedback
   pressedScale: 0.94
+  clickSound: 2
 --- !u!222 &1893627892
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -42063,6 +42094,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFeedback
   pressedScale: 0.94
+  clickSound: 0
 --- !u!114 &1939560558
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44126,6 +44158,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFeedback
   pressedScale: 0.94
+  clickSound: 2
 --- !u!222 &2057736948
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -44210,6 +44243,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFeedback
   pressedScale: 0.94
+  clickSound: 2
 --- !u!114 &2067032996
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -44645,6 +44679,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::ButtonFeedback
   pressedScale: 0.94
+  clickSound: 0
 --- !u!114 &2076474065
 MonoBehaviour:
   m_ObjectHideFlags: 0

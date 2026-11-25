@@ -90,6 +90,7 @@ public class UIRouter : MonoBehaviour
         UIScreen from = Current;
         from.OnHide(false);
         stack.Add(next);
+        if (next.ScreenKind == UIScreen.Kind.Page) UiAudio.Play(UiSound.Open);   // modals play their own
         if (next.ScreenKind == UIScreen.Kind.Modal)
             yield return PopIn(next);
         else if (ReduceMotion)
@@ -116,6 +117,7 @@ public class UIRouter : MonoBehaviour
         UIScreen from = Current;
         UIScreen to = stack[toIndex];
         var popped = stack.GetRange(toIndex + 1, stack.Count - toIndex - 1);
+        if (from.ScreenKind == UIScreen.Kind.Page) UiAudio.Play(UiSound.Back);
         foreach (var s in popped) s.OnHide(true);
         stack.RemoveRange(toIndex + 1, popped.Count);
 
